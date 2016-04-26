@@ -55,6 +55,8 @@ body, html {
 	padding: 8px;
 	border-radius: 5px;
 	background: rgba(0,0,0,.5);
+	color: #ff69b4;
+	padding: 5px;
 }
 
 .header-link:hover {
@@ -70,10 +72,8 @@ body, html {
 	width: 100%;
 	font-size: 21px;
 	font-weight: 400;
-    color: black;
     -webkit-text-fill-color: #ff69b4;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
 }
 
 a {
@@ -101,15 +101,25 @@ a {
 	background-color: #f8f0f1;
 }
 
-#about-text {
-	margin-top: 30px;
-	position: absolute;
-	left: 50%;
-	font-size: 25px;
+#about-text {	
+	margin-top: 50px;
 }
 
 .about-item {
 	margin-bottom: 35px;
+	position: relative;
+	left: 50%;
+	font-size: 25px;
+}
+
+.one, .five {
+	position: relative;
+	left:-40px;
+}
+
+.two, .four {
+	position: relative;
+	left: -14px;
 }
 
 li {
@@ -129,6 +139,10 @@ li {
 	border-radius: 50%;
 }
 
+.inactive{
+	display: none;
+}
+
 .carousel-container {
 	width: 960px;
 	margin: auto;
@@ -138,7 +152,7 @@ li {
 }
 
 #carousel {
-	width: 4800px;
+	width:960px;
 	height: 100%;
 	margin-left: 0px;
 	-webkit-transition: all 0.3s;
@@ -146,44 +160,70 @@ li {
 
 .carousel-item {
 	width: 960px;
+	/*width: 100%;*/
 	position: relative;
 	height: 100%;
 	float: left;
 }
 
 #gallery {
+	position:relative;
 	height: 100%;
 	min-height: 600px;
 }
 
-#carousel-prev {
+.gallery-button-left {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     left: 60px;
-    top: 50%;
+    top: 90px;
     margin-top: -30px;
     cursor: pointer;
-    /*border-radius: 50%;*/
-    /*border: 1px solid;*/
     -webkit-transition: all 0.3s;
-    /*color:pink;*/
 }
 
-#carousel-next {
+.gallery-button-right {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     right: 60px;
-    top: 50%;
+    top: 90px;
     margin-top: -30px;
     cursor: pointer;
-    /*border-radius: 50%;*/
-    /*border: 1px solid;*/
     -webkit-transition: all 0.3s;
-    /*color: pink;*/
+}
+
+.second-row {
+	position: absolute;
+	top: 160px;
+}
+
+.third-row {
+	position: absolute;
+	top: 230px;
+}
+
+.fourth-row {
+	position: absolute;
+	top: 300px;
+}
+
+.fifth-row {
+	position: absolute;
+	top: 370px;
+}
+
+.sixth-row {
+	position: absolute;
+	top: 440px;
+}
+
+.seventh-row {
+	position: absolute;
+	top: 520px;
 }
 
 .pic {
@@ -216,15 +256,19 @@ li {
 #first-service {
 	display: inline-block;
 	margin-left: calc(50% - 565px); 
+	margin-top: 50px;
 }
 
 #second-service {
 	display: inline-block;
 	margin-left: 15px;
+	margin-top: 50px;
 }
 
 #services {
     background-color: #f8f0f1;
+    height: 100%;
+    min-height: 600px;
 }
 
 #contact{
@@ -238,7 +282,6 @@ li {
 
 .img-scaled-contact {
 	width: 100%;
-	/*width: 20%;*/
 	display: inline-block;
 }
 
@@ -264,6 +307,72 @@ li {
 	margin-left: calc(33% - 170px);
 }
 
+#modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+#modal-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+#modal-box {
+    width: 500px;
+    height: 400px;
+    background: #ffe9ec;
+    position: absolute;
+    z-index: 100;
+    top: calc(50% - 130px);
+    left: calc(50% - 250px);
+}
+
+.input-text  {
+    border: 2px solid #636363;
+    padding: 10px;
+    background: transparent;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 437px;
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+}
+
+#big-input {
+	height: 100px;
+}
+
+.input-text::-webkit-input-placeholder  {
+    color: #636363;
+}
+.box-button {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    background-color: #636363;
+    width: 60px;
+    height: auto;
+    margin: 5px;
+    margin-right: 20px;
+    text-align: center;
+    padding:10px;
+    color: #ffe9ec;
+    font-weight: 700;
+    font-size: 12px;
+}
+#submit {
+    margin-right: 5px;
+}
+#box-title {
+    color: #636363;
+    font-size: 25px;
+    font-weight: 100;
+    margin: 20px 20px 20px 20px;
+}
 
 
 
